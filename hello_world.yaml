@@ -1,6 +1,7 @@
 ---
 - name: Print hello world
   hosts: all
+  remote_user: student
   tasks:
     - name: Print Hello
       debug:
