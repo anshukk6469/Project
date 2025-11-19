@@ -1,8 +1,11 @@
 ---
 - name: Print hello world
   hosts: all
-  remote_user: student
   tasks:
     - name: Print Hello
       debug:
         msg: "HELLO WORLD"
+
+    - name: Print all Good Now
+      debug:
+        msg: "ALL GOOD NOW"
