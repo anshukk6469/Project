@@ -1,0 +1,9 @@
+---
+- name: Configuring machines into webserver
+  hosts: all
+  become: true
+  tasks:
+    - name: Installing Apache2 into machines
+      ansible.builtin.apt:
+        name: apache2
+        state: present
