@@ -3,6 +3,10 @@ pipeline {
    environment {
       TF_DIR = "terraform"
       ANSIBLE_DIR = "ansible"
+      ARM_CLIENT_ID=credentials('azure-client-id')
+      ARM_CLIENT_SECRET=credentials('azure-client-secret')
+      ARM_TENANT_ID=credentials('azure-tenant-id')
+      ARM_SUBSCRIPTION_ID=credentials('azure-subscription-id')
    }
    
    stages {
