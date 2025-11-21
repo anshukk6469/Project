@@ -108,7 +108,7 @@ resource "azurerm_subnet_network_security_group_association" "example" {
 }
 
 data "template_file" "ansible_inventory" {
-  template = "$file("${path.module}/inventory.tpl")"
+  template = file("${path.module}/inventory.tpl")
   vars = {
     vm_ips = join("\n", azurerm_linux_virtual_machine.example[*].public_ip_address)
   }
